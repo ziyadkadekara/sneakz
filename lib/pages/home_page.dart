@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:sneakz/components/bottom_nav_bar.dart';
 
+import 'cart_page.dart';
+import 'shop_page.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -34,6 +37,7 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: MyBottomNavBar(
         onTabChange: (index) => navigateBottomBar(index),
       ),
+      body: _pages[_selectedIndex],
     );
   }
 }
